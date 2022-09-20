@@ -1,4 +1,4 @@
 class User < ApplicationRecord
-	belongs_to :user
-	belongs_to :book
+	has_many :books, through: :user_books
+	has_many :user_books
 end
